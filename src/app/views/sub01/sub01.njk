@@ -1,0 +1,29 @@
+{% extends "../layout.njk" %}
+
+{% block head %}
+    <title>SUB-01</title>
+    
+{% endblock %}
+
+{% block contentSubMenu %}
+    <div class="sub-menu">
+        {% for btn in subMenu.buttons %}
+            
+            <button class="btn-menu" name="id" onclick="location.href='/sub01/{{btn}}'">{{btn}}</button>
+                
+        {%endfor%}
+    </div>
+
+{% if pageButton  %}
+    
+    {% include pageButton %}
+
+{% endif %}
+
+{% block scriptHour %}
+    
+    {% include '../scriptHour.njk' %}
+
+{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,86 @@
+    
+    
+    <section class="contents-sub">
+        <p class="idPage">{{subMenu.buttons[0]}}</p>
+            
+        <div class="transformer TR1">
+                <div class="contents-enr TR1">
+                        <p class="idTrafo">TR-1</p>
+                        <div class="enr-one"></div>
+                        <div class="enr-two"></div>
+                        <div class="enr-three"></div>
+                </div>
+        </div>
+        
+        <div class="transformer TR2">
+                <div class="contents-enr TR2">
+                        <p class="idTrafo">TR-2</p>
+                        <div class="enr-one"></div>
+                        <div class="enr-two"></div>
+                        <div class="enr-three"></div>
+                </div>
+        </div>
+
+        <section class="contents-amount">
+        {% for cubicle in subMenu.cubicles.amount %}        
+                <div class="cubicle">
+                        <p class="idCub">{{cubicle.idCub}}</p>
+                        <div class="mensur amount">
+                                <p class="current">0.00 A</p>
+                                <p class="current">0.00 MVAr</p>
+                                <p class="current">0.00 FP</p>
+
+                        </div>
+
+                        <div class="djA amount" id="{{cubicle.idCub}}-A">
+                                <div class="lineTopAmount"></div>
+                                <div class="lineBottonDownstream A"></div>
+
+                        </div>
+                        <div class="djB amount" id="{{cubicle.idCub}}-B">
+                                <div class="lineBottonDownstream B"></div>
+                        </div>
+                        
+                </div>
+        {% endfor %}
+
+        </section>
+        <div class="line lineOne"></div>
+        <div class="line lineTwo"></div>
+
+        <div class="djContent">
+                
+        {% for cubicle in subMenu.cubicles.downstream %}        
+                <div class="cubicle">
+                        <p class="idCub">{{cubicle.idCub}}</p>
+                        <div class="mensur">
+                                <p class="current">0.00 A</p>
+                                <p class="current">0.00 MVAr</p>
+                                <p class="current">0.00 FP</p>
+
+                        </div>
+
+                        <div class="djA" id="{{cubicle.idCub}}-A">
+                                <div class="lineTop A"></div>
+
+                        </div>
+                        <div class="djB" id="{{cubicle.idCub}}-B">
+                                <div class="lineTop B"></div>
+                        </div>
+                        
+                        <div class="lineBotton">
+                                <p class="goToSub">{{cubicle.goToSubId}}</p>
+                                <p class="goToSub">{{cubicle.goToSubName}}</p>
+
+                                <div class="lineBottonSec"></div>
+
+                                <div class="secContent" id="{{cubicle.idCub}}-SEC"></div>
+                        </div>
+                </div>
+        {% endfor %}        
+                
+        </div>
+
+        {% include "../scripts/script.njk" %}
+        
+    </section>

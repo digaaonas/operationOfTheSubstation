@@ -1,0 +1,82 @@
+{
+    "submenu": [
+        {
+        "id":"sub01",
+        "buttons":[
+            "BARRA I - II",
+            "BARRA III",
+            "FILTRO HARMONICO",
+            "SE EMERGENCIA I",
+            "SE EMERGENCIA II",
+            "BARRA I - II",
+            "BARRA I - II",
+            "BARRA I - II",
+            "BARRA I - II",
+            "BARRA I - II",
+            "BARRA I - II"
+        ],
+        "cubicles": {
+            "amount":[
+                {
+                    "idCub":"1H1"                    
+                },
+                {
+                    "idCub":"1H2"
+                }
+            ],
+            "downstream":[
+                {
+                    "idCub": "1H4",
+                    "goToSubId": "SE-03",
+                    "goToSubName": "FOX"
+                },
+                {
+                    "idCub": "1H5",
+                    "goToSubId": "SE-04",
+                    "goToSubName": "MATERIA PRIMA"
+                },
+                {
+                    "idCub": "1H6",
+                    "goToSubId": "SE-05", 
+                    "goToSubName": "FERRO GUSA" 
+                },
+                {
+                    "idCub": "1H7",
+                    "goToSubId": "SE-06", 
+                    "goToSubName": "ACIARIA I" 
+                },
+                {
+                    "idCub": "1H8",
+                    "goToSubId": "SE-06",
+                    "goToSubName": "ACIARIA II" 
+
+                },
+                {
+                    "idCub": "1H9",
+                    "goToSubId": "SE-07",
+                    "goToSubName": "LAMINAÇÃO I" 
+
+                },
+                {
+                    "idCub": "1H10",
+                    "goToSubId": "SE-07",
+                    "goToSubName": "LAMINAÇÃO II" 
+
+                },
+                {
+                    "idCub": "1H11",
+                    "goToSubId": "SE-08",
+                    "goToSubName": "TEMPERA" 
+
+                },
+                {
+                    "idCub": "1H14",
+                    "goToSubId": "SE-02",
+                    "goToSubName": "UTILIDADES" 
+
+                }
+        ]
+    }
+    }
+]
+}

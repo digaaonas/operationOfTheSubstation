@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:700&display=swap&subset=latin-ext');
+
+/*===========VAR===========*/
+
+:root{
+    --color-primary: rgb(231, 231, 231)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+/*=====ELEMENTS OF DOM=======*/
+
+html{
+    font-size: 16pt;
+}
+
+@media (max-width: 1440px){
+    html{
+        font-size: 13pt
+    }
+}
+
+body{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-primary);
+    text-align: center;
+    align-items: center;
+    
+}
+
+header{
+    text-align: center;
+    width: 100vw;
+    height: 8vh;
+    background-color: var(--color-primary);
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+
+.card{
+    background-color: var(--color-primary);
+    position: relative;
+    width: 100vw;
+    height: 84vh;
+    display: block;
+    box-sizing: border-box;    
+}
+
+footer{
+    background-color: var(--color-primary);
+    width: 100vw;
+    height: 8vh;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+
+/*=========MENU=======*/
+
+.card-header{
+    height: 100%;
+    width: 100%
+}
+
+span{
+    display: flex;
+    flex-direction: row;
+    padding: 1.5px;
+    height: 55%;
+    width: 95%;
+    margin: 0;
+    margin-bottom: 5px;
+    background-color: rgb(255, 166, 2);
+    border-radius: 20px;
+    transform: translate(2.2vw);
+    box-shadow: 2px 2px 5px;
+}
+
+span input{
+    border-radius: 15px;
+    border: 1px solid black;
+    text-align: center;
+    font-style: bolder Arial;
+    font-weight: 800;
+    font-size: .5rem;
+    height: 50%;
+    flex: .1;
+    right: 6%;
+    top: 17%;
+    margin-left: 10px;
+    position: absolute;
+
+}
+
+span .title{
+    color: rgb(31, 32, 34);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Source Serif Pro', serif;
+    position: relative;
+    height: 50%;
+    padding-top: 5px;
+    flex: 1;
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    height: 45%;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+/*===========SUB-MENU==========*/
+
+.sub-menu{
+    display: flex;
+    width: 100%;
+    height: 6%;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 10px;
+    text-align: center;
+
+}
+
+.btn-menu {
+    padding: 0 12px;
+    border: .5px solid black;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px;
+    height: 90%;
+    font-size: .4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    background-color: rgb(218, 214, 214);
+    flex: 1;
+    position: relative;
+    margin: 0 4px;
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+    transition: 1s;
+}
+
+.btn-menu:hover{
+    transition: 1s;
+    background-color: rgb(255, 166, 2);
+}
+
+/*=========FOOTER========*/
+
+table{
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+thead{
+    text-align: left;
+    background-color: rgb(204, 200, 200);
+}
+
+thead th{
+    border-right: 4px solid silver;
+    padding: 2px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*========ERR OF SCREEN=====*/
+
+.screenError{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;    
+}
+
+.screenError .titleError{
+    flex: 1;
+    padding: 40vh 0;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;    
+}
+
+@media (max-width: 1359px){
+    .card, header, footer {
+        display: none;
+        
+    }
+}
+
+@media (max-height: 624px){
+    .card, header, footer {
+        display: none;
+        
+    }
+}
+
+@media (min-width: 1360px) and (min-height: 625px){
+    .screenError {
+        display: none;
+        
+    }
+}
+
+/*=========BARRAMENTS========*/
+
+.contents-sub{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contents-sub .idPage{
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: .9rem;
+    position: relative;
+    margin-top: 8px;
+    border: 1px solid black;
+    width: 40%;
+    left: 30%;
+    border-radius: 20px;
+    background-color: floralwhite;
+    box-shadow: 2px 4px 8px;
+}
+
+.contents-amount{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    position: relative;
+    z-index: 10;
+}
+
+.line{
+    width: 95%;
+    height: 2px;
+    background-color: green;
+    position: relative;
+    border: 2px inset darkgreen;
+    border-radius: 4px;
+    top: 40%;
+}
+
+.lineOne{
+    transform: translate(1.5vw, 3.3vh);
+}
+
+.lineTwo{
+    transform: translate(3.5vw, 5.2vh);
+}
+
+/*=======CONTENT SWITCH======*/
+
+section .djContent,
+section .contents-amount{
+    border: 1.1px solid black;
+    width: 98.5%;
+    height: 40%;
+    transform: translate(.5vw, 40vh);
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: rgb(218, 214, 214);
+}
+
+section .contents-amount{
+    transform: translate(35.5vw, 8vh);
+    width: 30%;
+    height: 30%;
+}
+
+.lineTopAmount{
+    position: relative;
+    width: 235%;
+    height: 100%;
+    border: 4px ridge darkgreen;
+    border-bottom: none;
+    z-index: 0;
+    top: -124%;
+    left: 41.5%;
+}
+
+section .cubicle{
+    width: 1%;
+    height: 85%;
+    flex: 1;
+    border: 1.1px dashed black;
+    transform: translate(0, .5vh);
+    display: flex;
+    margin: 5px;
+    background-color: white;
+}
+
+section .cubicle .idCub{
+   position: absolute;
+   font-size: .7rem;
+   font-weight: 800;
+   font-family: monospace;
+   margin: 2px; 
+}
+
+section .cubicle .mensur{
+    position: absolute;
+    font-size: .55rem;
+    font-weight: 800;
+    font-family: monospace;
+    margin: 2px;
+    text-align: left;
+    bottom: 4%;
+}
+
+section .cubicle .mensur.amount{
+    display: block;
+    transform: translate(10vw, -13vh);    
+}
+
+section .cubicle .djA{
+    transition: 2000ms;
+    height: 30px;
+    background-color: blue;
+    border: 2px inset darkblue;
+    top: 24%;
+    position: relative;
+    box-sizing: border-box;
+    flex: .8;
+    margin: 13.5%;
+    margin-top: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+section .cubicle .djA.amount,
+section .cubicle .djB.amount{
+    top: 60%;
+}
+
+section .cubicle .djA.active{
+    transition: 2000ms;
+    border: 2px inset brown;
+    background-color: red;
+}
+
+section .cubicle .djB{
+    transition: 2000ms;
+    height: 30px;
+    background-color: blue;
+    border: 2px inset darkblue;
+    top: 24%;
+    position: relative;
+    box-sizing: border-box;
+    flex: .8;
+    margin: 13.5%;
+    margin-top: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+section .cubicle .djB.active{
+    transition: 2000ms;
+    border: 2px inset brown;
+    background-color: red;       
+}
+
+section .cubicle .lineTop{
+    width: 3%;
+    height: 12.4vh;
+    border: 2px inset darkgreen;
+    background-color: green;
+}
+
+section .cubicle .lineTop.A{
+    width: 3%;
+    height: 12.3vh;
+    border: 2px inset darkgreen;
+    background-color: green;
+    transform: translate(0, -13vh);
+    left: 43%;
+    position: absolute;    
+}
+
+section .cubicle .lineTop.B{
+    width: 3%;
+    height: 9.3vh;
+    border: 2px inset darkgreen;
+    background-color: green;
+    transform: translate(0, -10.2vh);
+    left: 43%;
+    position: absolute;    
+}
+    
+section .cubicle .lineBotton, 
+.lineBottonDownstream{
+    width: 47.5%;
+    height: 7.3vh;
+    border: 5px groove darkgreen;
+    flex: 0;
+    position: absolute;
+    border-top: none;
+    left: 24%;
+    top: 36%;
+}
+
+.lineBottonDownstream{
+    border-right: none;
+    border-bottom: none;
+    z-index: -1;
+    top: 100%;
+}
+
+.lineBottonDownstream.A{
+    left: 40%;
+    height: 4rem;
+}
+
+.lineBottonDownstream.B{
+    left: 48%;
+    height: 4.9rem;
+    z-index: 0;
+}
+
+.transformer{
+    position: absolute; 
+    width: 18%;
+    height: 5%;
+    border: 4px groove darkgreen;
+    z-index: 11;
+}
+
+.transformer.TR1{
+    transform: translate(21.25vw, 14vh);
+    border-top:none;
+    border-right: none;    
+}
+
+.transformer.TR2{
+    transform: translate(61.75vw, 14vh);
+    border-top:none;
+    border-left: none;
+}
+
+.contents-enr{
+    position: absolute;
+}
+
+.contents-enr.TR1{
+    transform: translate(-1.6vw, -8vh);
+}
+
+.contents-enr.TR2{
+    transform: translate(16.6vw, -8vh);
+}
+
+.idTrafo{
+    position: absolute;
+    transform: translate(-4vw);
+    font-size: .7rem;
+}
+
+.enr-one, 
+.enr-two,
+.enr-three{
+    width: 40px;
+    height: 40px;
+    border: 4px groove red;
+    border-radius: 50%;
+    position: absolute;
+    animation: rotate-enr infinite 2s;
+    
+}
+
+.enr-two{
+    transform: translate(0.9vw, 3vh);
+}
+
+.enr-three{
+    transform: translate(-0.9vw, 3vh);
+}
+
+/* @keyframes rotate-enr{
+    to{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+
+    }
+} */
+
+section .cubicle .lineBotton .goToSub{
+    font-size: .6rem;
+    padding: 2%;
+    margin-top: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;    
+}    
+
+section .cubicle .lineBotton .lineBottonSec{
+    width: 0;
+    height: 12vh;
+    border: 2.5px groove darkgreen;
+    background-color: darkgreen;
+    position: absolute;
+    left: 46%;
+    top: 101%;
+    z-index: 10; 
+}
+
+section .cubicle .lineBotton .secContent{
+    width: 95%;
+    height: 90%;
+    border: 1px solid black;
+    position: absolute;
+    left: 46%;
+    top: 150%;
+    z-index: -10;
+    background-image: url(./img/sec_open.png);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: -10px;
+    background-position-x: 50%;
+    background-color: blue;
+    cursor: pointer;
+    transition: 2000ms;
+}
+
+section .cubicle .lineBotton .secContent.active{
+    background-color: red;
+    background-image: url(./img/sec_close.png);
+    background-position-x: 100%;
+    transition: 2000ms;    
+}

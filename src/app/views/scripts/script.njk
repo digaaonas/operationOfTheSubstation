@@ -1,0 +1,52 @@
+<script>
+    
+    const djA = document.querySelectorAll(`.djA`)
+    const djB = document.querySelectorAll(`.djB`)
+    const secAterra = document.querySelectorAll(`.secContent`)
+
+    for (let cubA of djA){
+
+        cubA.addEventListener('click', ()=>{
+
+        const idCubB = cubA.id.replace('A', 'B')
+        const containActiveCubB = document.getElementById(idCubB).classList.contains("active")
+
+        const idSec = cubA.id.replace('A', 'SEC')
+        const containActiveSec = document.getElementById(idSec).classList.contains("active")
+
+        containActiveCubB || containActiveSec ? alert("Close Error!!") : cubA.classList.toggle("active")
+     
+    })
+    
+    }
+    
+    for (let cubB of djB){
+
+        cubB.addEventListener('click', ()=>{
+
+        const idCubA = cubB.id.replace('B', 'A')
+        const containActiveCubA = document.getElementById(idCubA).classList.contains("active")
+
+        const idSec = cubB.id.replace('B', 'SEC')
+        const containActiveSec = document.getElementById(idSec).classList.contains("active")
+
+        containActiveCubA || containActiveSec ? alert("Close Error!!") : cubB.classList.toggle("active")
+
+    })
+
+    }
+
+    for (let sec of secAterra){
+        sec.addEventListener('click', ()=>{
+
+        const idCubB = sec.id.replace('SEC', 'B')
+        const containActiveCubB = document.getElementById(idCubB).classList.contains("active")
+
+        const idCubA = sec.id.replace('SEC', 'A')
+        const containActiveCubA = document.getElementById(idCubA).classList.contains("active")
+
+        containActiveCubB || containActiveCubA ? alert("Close Error!!") : sec.classList.toggle("active")
+    })
+   
+    }
+</script>

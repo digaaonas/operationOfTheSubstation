@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>SUB-02</title>
+
+{% endblock %}
+
+{% block contentSubMenu %}
+    <div class="sub-menu">
+
+        {% for btn in subMenu.botoes %}
+            
+            <button class="btn-menu" name="id">{{btn}}</button>
+                
+        {%endfor%} 
+
+    </div>
+
+{% endblock %}
